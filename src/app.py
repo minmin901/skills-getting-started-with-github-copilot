@@ -1,3 +1,4 @@
+
 """
 High School Management System API
 
@@ -65,20 +66,27 @@ activities = {
         "max_participants": 20,
         "participants": ["amelia@mergington.edu", "benjamin@mergington.edu"]
     },
-    # Intellectual activities
-    "Math Olympiad": {
-        "description": "Prepare for math competitions and solve challenging problems",
-        "schedule": "Fridays, 2:00 PM - 3:30 PM",
-        "max_participants": 10,
-        "participants": ["charlotte@mergington.edu", "ethan@mergington.edu"]
-    },
-    "Science Club": {
-        "description": "Conduct experiments and explore scientific concepts",
-        "schedule": "Wednesdays, 4:00 PM - 5:00 PM",
-        "max_participants": 14,
-        "participants": ["harper@mergington.edu", "jackson@mergington.edu"]
+
+        # Intellectual activities
+        "Math Olympiad": {
+            "description": "Prepare for math competitions and solve challenging problems",
+            "schedule": "Fridays, 2:00 PM - 3:30 PM",
+            "max_participants": 10,
+            "participants": ["charlotte@mergington.edu", "ethan@mergington.edu"]
+        },
+        "Science Club": {
+            "description": "Conduct experiments and explore scientific concepts",
+            "schedule": "Wednesdays, 4:00 PM - 5:00 PM",
+            "max_participants": 14,
+            "participants": ["harper@mergington.edu", "jackson@mergington.edu"]
+
+        }
     }
-}
+
+# 末尾に追加
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("app:app", host="0.0.0.0", port=5001, reload=True)
 
 
 @app.get("/")
